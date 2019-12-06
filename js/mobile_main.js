@@ -5,7 +5,20 @@ $(function(){
 		$(".pop").hide();
 	});
 
-	// 찾기 팝업
+	// top 버튼
+	$(".top").click(function(e){
+		e.preventDefault();
+		$("html").animate({"scrollTop":0}, 800);
+	});
+	$(window).scroll(function(){
+		if($(window).scrollTop() > 50){
+			$(".top").addClass("active");
+		}
+		else{
+			$(".top").removeClass("active");
+		}
+	});
+	// 검색 팝업
 	$(".utils > .search").click(function(e){
 		e.preventDefault();
 		$(".search_pop").addClass("active");

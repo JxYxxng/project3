@@ -24,7 +24,7 @@ section {
 	clear: both;
 }
 .pop {
-	position: fixed; right: 10px; bottom: 10px;
+	position: fixed; left: 10px; bottom: 10px;
 	width: 120px;
 	z-index: 998;
 }
@@ -37,6 +37,27 @@ section {
 }
 .pop img {
 	width: 100%;
+}
+.top {
+	position: fixed; right: -60px; bottom: 10px;
+	z-index: 998;
+	transition: right 0.5s;
+}
+.top.active {
+	right: 10px;
+}
+.top a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 0.75em;
+	font-weight: 600;
+	color: #b5252e;
+	background-color: rgba(255,255,255,0.7);
+	border: 1px solid #b5252e;
+	border-radius: 20px;
 }
 /* basic */
 input[type=text]{
@@ -131,6 +152,7 @@ input[type=text]{
 	width: 40px;
 	height: 40px;
 	transition: left 0.2s;
+	opacity: 0.8;
 }
 .menu.active .tab_close {
 	left: 275px;
